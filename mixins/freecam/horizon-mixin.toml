@@ -1,12 +1,12 @@
 [mod]
 id = "freecam"
-version = "0.1.0"
+version = "0.1.1"
 priority = 100
 
 # The commit it was tested on: it patches the client's perspective, input
 # and motion sources directly, so a Horizon change there needs a re-check.
 [compatibility]
-horizon_revision = "af55a734865da4f1b11836164a979ff06a1f0449"
+horizon_revision = "6475f62f3c834b7489e1816bf47f47ea5eb2b879"
 
 # The mod's brain: pure standard library, no game types, tested on its own.
 [[module]]
@@ -194,5 +194,5 @@ bindings = [
 id = "freeze"
 kind = "HEAD"
 cancellable = true
-target = "horizon_client::motion::MotionWorld<'_,'_,'_>::controlled_simulation_tick_with_sprint_window"
+target = "horizon_client_lib::motion::MotionWorld<'_,'_,'_>::controlled_simulation_tick_with_sprint_window"
 helper = "freeze.rs"
